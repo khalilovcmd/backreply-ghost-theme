@@ -1,0 +1,84 @@
+/* Error Templates - Brutalist Style
+/* ---------------------------------------------------------- */
+
+.gh-error {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2vmin;
+}
+
+.gh-error-content {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.gh-error-code {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 14vmin;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.gh-error-description {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 4vmin;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: var(--color-muted-fg);
+}
+
+.gh-error-link {
+    display: block;
+    margin-top: 4vmin;
+    font-size: 1.6rem;
+}
+
+.gh-error-link a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: #fff;
+    background: var(--color-primary);
+    border: var(--border-width) solid var(--color-primary);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gh-error-link a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow);
+}
+
+.gh-error-stack {
+    max-width: 600px;
+    margin: 0 auto 0;
+    padding: 8vmin 0;
+    text-align: left;
+}
+
+.gh-error-stack-list {
+    margin: 4vmin 0 0;
+    font-size: 1.4rem;
+}
+
+.gh-error-stack-list > li {
+    padding: 2rem 0;
+    margin: 0;
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+.gh-error-stack-function {
+    margin: 0 0 0.5em;
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    color: var(--color-error);
+}

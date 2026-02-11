@@ -1,0 +1,167 @@
+/* Global Footer - Brutalist Multi-Column (matching Interhubz website)
+/* ---------------------------------------------------------- */
+
+.gh-foot {
+    padding: 6vmin 4vmin 0;
+    background: var(--color-base);
+    color: var(--color-bg);
+    border-top: var(--border-width-thick) solid var(--color-primary);
+}
+
+.gh-foot a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.gh-foot a:hover {
+    color: var(--color-primary);
+}
+
+
+/* Footer Grid Layout
+/* ---------------------------------------------------------- */
+
+.gh-foot-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 4vmin;
+}
+
+@media (max-width: 900px) {
+    .gh-foot-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .gh-foot-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+
+/* Brand Column
+/* ---------------------------------------------------------- */
+
+.gh-foot-brand {
+    padding-right: 2rem;
+}
+
+.gh-foot-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    text-decoration: none;
+}
+
+.gh-foot-logo:hover {
+    color: var(--color-primary);
+}
+
+.gh-foot-logo img {
+    max-height: 32px;
+}
+
+.gh-foot-logo-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.gh-foot-logo:hover .gh-foot-logo-name {
+    color: var(--color-primary);
+}
+
+.gh-foot-tagline {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0 0 1.2rem;
+}
+
+.gh-foot-email a {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.gh-foot-email a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Footer Columns
+/* ---------------------------------------------------------- */
+
+.gh-foot-col-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin: 0 0 1.2rem;
+}
+
+.gh-foot-col-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-foot-col-list li {
+    margin: 0 0 0.6rem;
+}
+
+.gh-foot-col-list a {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+}
+
+
+/* Footer Bottom Bar
+/* ---------------------------------------------------------- */
+
+.gh-foot-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 2vmin;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.gh-foot-bottom-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.gh-foot-bottom-links a {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 1.3rem;
+}
+
+.gh-foot-bottom-links a:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 500px) {
+    .gh-foot-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

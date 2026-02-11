@@ -1,0 +1,83 @@
+{{!-- Sidebar with brutalist cards --}}
+<aside class="gh-sidebar">
+
+    {{!-- About Us Card --}}
+    <div class="gh-sidebar-card">
+        <h3 class="gh-sidebar-card-title"><span>About Us</span></h3>
+        <div class="gh-sidebar-card-body">
+            <div class="gh-sidebar-about">
+                {{#if @site.logo}}
+                    <img class="gh-sidebar-about-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+                {{else}}
+                    <img class="gh-sidebar-about-logo" src="{{asset "images/interhubz.png"}}" alt="Interhubz" />
+                {{/if}}
+                <p>Built by support operators, for support operators. Our team includes ex-Intercom employees with 7+ years of API integration experience.</p>
+                <p>We sync Intercom conversations to HubSpot as clean timeline entries &mdash; with smart contact matching, ticket creation, and noise filtering. No more broken integrations.</p>
+                <a class="gh-sidebar-about-link" href="https://interhubz.com/about" target="_blank" rel="noopener">Our story &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Featured Articles Card --}}
+    <div class="gh-sidebar-card">
+        <h3 class="gh-sidebar-card-title"><span>Latest Articles</span></h3>
+        <div class="gh-sidebar-card-body">
+            <ul class="gh-sidebar-articles">
+                {{#get "posts" limit="3" order="published_at desc"}}
+                    {{#foreach posts}}
+                    <li class="gh-sidebar-article">
+                        <span class="gh-sidebar-article-num">{{@number}}</span>
+                        <div class="gh-sidebar-article-content">
+                            <a href="{{url}}" class="gh-sidebar-article-title">{{title}}</a>
+                            <time class="gh-sidebar-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time>
+                        </div>
+                    </li>
+                    {{/foreach}}
+                {{/get}}
+            </ul>
+        </div>
+    </div>
+
+    {{!-- Find Us Card --}}
+    <div class="gh-sidebar-card">
+        <h3 class="gh-sidebar-card-title"><span>Find Us</span></h3>
+        <div class="gh-sidebar-card-body">
+            <ul class="gh-sidebar-links">
+                <li>
+                    <a href="https://www.intercom.com/app-store/?app_package_code=hubspot-connect-by-interhubz" target="_blank" rel="noopener" class="gh-sidebar-link">
+                        <span class="gh-sidebar-link-icon gh-sidebar-link-intercom">
+                            <img src="{{asset "images/intercom.png"}}" alt="Intercom" width="20" height="20" />
+                        </span>
+                        <span class="gh-sidebar-link-text">
+                            <strong>Intercom App Store</strong>
+                            <small>Install our Intercom app</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ecosystem.hubspot.com/marketplace/listing/intercom-integration" target="_blank" rel="noopener" class="gh-sidebar-link">
+                        <span class="gh-sidebar-link-icon gh-sidebar-link-hubspot">
+                            <img src="{{asset "images/hubspot.png"}}" alt="HubSpot" width="20" height="20" />
+                        </span>
+                        <span class="gh-sidebar-link-text">
+                            <strong>HubSpot Marketplace</strong>
+                            <small>Find us on HubSpot</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/interhubz" target="_blank" rel="noopener" class="gh-sidebar-link">
+                        <span class="gh-sidebar-link-icon gh-sidebar-link-linkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.47 2H3.53A1.45 1.45 0 002 3.37v17.26A1.45 1.45 0 003.53 22h16.94A1.45 1.45 0 0022 20.63V3.37A1.45 1.45 0 0020.47 2zM8.09 18.74h-3v-9h3v9zM6.59 8.48a1.56 1.56 0 110-3.12 1.56 1.56 0 010 3.12zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0012.85 13a2 2 0 00-.1.73v5h-3v-9h3v1.2a3 3 0 012.71-1.5c2 0 3.45 1.29 3.45 4.06v5.25z" fill="currentColor"/></svg>
+                        </span>
+                        <span class="gh-sidebar-link-text">
+                            <strong>LinkedIn</strong>
+                            <small>Follow us for updates</small>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</aside>

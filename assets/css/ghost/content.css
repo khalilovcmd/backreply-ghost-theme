@@ -1,0 +1,273 @@
+/* Content grid
+/* ---------------------------------------------------------- */
+
+.gh-canvas,
+.kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
+}
+
+.gh-canvas > * {
+    grid-column: main-start / main-end;
+}
+
+.kg-width-wide,
+.kg-content-wide > div {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
+}
+
+
+/* Content & Typography
+/* ---------------------------------------------------------- */
+
+.gh-content > * + * {
+    margin-top: 4vmin;
+}
+
+/* Content headings get primary color accent */
+.gh-content h2,
+.gh-content h3,
+.gh-content h4 {
+    color: var(--color-base);
+}
+
+.gh-content h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 0.8em;
+    background: var(--color-primary);
+    margin-right: 0.4em;
+    vertical-align: baseline;
+}
+
+/* Content links use primary with underline */
+.gh-content a:not([class]) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: hsla(220, 90%, 56%, 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.15s ease;
+}
+
+.gh-content a:not([class]):hover {
+    text-decoration-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.gh-content [id]:not(:first-child) {
+    margin: 1.5em 0 0;
+}
+
+.gh-content > [id] + * {
+    margin-top: 1.5rem;
+}
+
+.gh-content [id] + .kg-card,
+.gh-content blockquote + .kg-card {
+    margin-top: 6vmin;
+}
+
+.gh-canvas > blockquote,
+.gh-canvas > ol,
+.gh-canvas > ul,
+.gh-canvas > dl,
+.gh-canvas > p {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.7em;
+}
+
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
+    padding-left: 1.9em;
+}
+
+.gh-content hr {
+    margin-top: 6vmin;
+}
+
+.gh-content hr + * {
+    margin-top: 6vmin !important;
+}
+
+.gh-content blockquote {
+    position: relative;
+    font-style: normal;
+    padding: 2rem 2.5rem;
+    background: var(--color-muted);
+    border-left: var(--border-width-thick) solid var(--color-primary);
+    border-top: var(--border-width) solid var(--color-border);
+    border-right: var(--border-width) solid var(--color-border);
+    border-bottom: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.gh-content blockquote::before {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .gh-canvas blockquote,
+    .gh-canvas ol,
+    .gh-canvas ul,
+    .gh-canvas dl,
+    .gh-canvas p {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+.gh-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: 6vmin;
+}
+
+.gh-content .kg-card + :not(.kg-card) {
+    margin-top: 6vmin;
+}
+
+figcaption {
+    padding: 1.5rem 1.5rem 0;
+    text-align: center;
+    color: var(--color-muted-fg);
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+}
+
+figcaption strong {
+    color: var(--color-base);
+}
+
+.gh-canvas :not(pre) code {
+    vertical-align: middle;
+    padding: 0.15em 0.4em 0.15em;
+    border: var(--border-width) solid var(--color-border);
+    font-family: var(--font-mono);
+    font-weight: 400 !important;
+    font-size: 0.85em;
+    line-height: 1em;
+    color: var(--color-primary);
+    background: var(--color-muted);
+    border-radius: 0;
+}
+
+.gh-canvas > pre {
+    overflow: scroll;
+    padding: 16px 20px;
+    font-family: var(--font-mono);
+    background: var(--color-base);
+    color: var(--color-bg);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow);
+    border-radius: 0;
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds  */
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.kg-image-card img {
+    margin: auto;
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.kg-width-wide.kg-card-hascaption img {
+    grid-column: wide-start / wide-end;
+}
+.kg-width-full.kg-card-hascaption img {
+    grid-column: 1 / -1;
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+    grid-column: main-start / main-end;
+}
+
+
+/* Tables - Brutalist Style
+/* ---------------------------------------------------------- */
+
+.gh-content table {
+    border-collapse: collapse;
+    width: 100%;
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.gh-content th {
+    padding: 0.6em 0.8em;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--color-base);
+    color: var(--color-bg);
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.gh-content td {
+    padding: 0.5em 0.8em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gh-content tbody tr:nth-child(2n + 1) {
+    background-color: var(--color-muted);
+    padding: 1px;
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td:last-child {
+    box-shadow: none;
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td {
+    box-shadow: none;
+}
+
+.gh-content tbody tr:last-child {
+    border-bottom: none;
+}

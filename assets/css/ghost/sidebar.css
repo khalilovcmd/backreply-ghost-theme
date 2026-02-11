@@ -1,0 +1,284 @@
+/* Sidebar - Brutalist Cards
+/* ---------------------------------------------------------- */
+
+/* Two-column layout */
+.gh-page-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 4rem;
+    align-items: start;
+}
+
+.gh-page-main {
+    min-width: 0;
+}
+
+/* On this layout, first card shouldn't span full width */
+.gh-page-with-sidebar .gh-postfeed > *:first-child {
+    grid-column: auto;
+}
+
+@media (max-width: 1080px) {
+    .gh-page-with-sidebar {
+        grid-template-columns: 1fr 280px;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .gh-page-with-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Sidebar Container
+/* ---------------------------------------------------------- */
+
+.gh-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 6vmin 0 4vmin;
+    position: sticky;
+    top: 8rem;
+}
+
+@media (max-width: 900px) {
+    .gh-sidebar {
+        position: static;
+        padding: 0 0 4vmin;
+    }
+}
+
+
+/* Sidebar Card
+/* ---------------------------------------------------------- */
+
+.gh-sidebar-card {
+    background: var(--color-card);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    overflow: visible;
+    position: relative;
+}
+
+.gh-sidebar-card-title {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.gh-sidebar-card-title span {
+    display: inline-block;
+    position: relative;
+    top: -1.1em;
+    padding: 0.3rem 1.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-base);
+    background: var(--color-card);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.gh-sidebar-card-body {
+    padding: 0 2rem 2rem;
+    margin-top: -0.5rem;
+}
+
+
+/* About Us Card
+/* ---------------------------------------------------------- */
+
+.gh-sidebar-about-logo {
+    max-height: 32px;
+    margin-bottom: 1.2rem;
+}
+
+.gh-sidebar-about p {
+    font-size: 1.35rem;
+    line-height: 1.55em;
+    color: var(--color-muted-fg);
+    margin: 0 0 0.8rem;
+}
+
+.gh-sidebar-about-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.gh-sidebar-about-link:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Latest Articles Card
+/* ---------------------------------------------------------- */
+
+.gh-sidebar-articles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-sidebar-article {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-muted);
+}
+
+.gh-sidebar-article:first-child {
+    padding-top: 0;
+}
+
+.gh-sidebar-article:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.gh-sidebar-article-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.6rem;
+    height: 2.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--color-primary);
+    border: var(--border-width) solid var(--color-border);
+}
+
+.gh-sidebar-article:nth-child(2) .gh-sidebar-article-num {
+    background: var(--color-secondary);
+}
+
+.gh-sidebar-article:nth-child(3) .gh-sidebar-article-num {
+    background: hsl(142, 76%, 36%);
+}
+
+.gh-sidebar-article-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.gh-sidebar-article-title {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.35em;
+    color: var(--color-base);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.gh-sidebar-article-title:hover {
+    color: var(--color-primary);
+}
+
+.gh-sidebar-article-date {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 1.15rem;
+    color: var(--color-muted-fg);
+}
+
+
+/* Find Us Card
+/* ---------------------------------------------------------- */
+
+.gh-sidebar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-sidebar-links li {
+    margin: 0 0 1.2rem;
+}
+
+.gh-sidebar-links li:last-child {
+    margin-bottom: 0;
+}
+
+.gh-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: var(--color-base);
+    background: var(--color-muted);
+    border: 1px solid var(--color-muted);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.gh-sidebar-link:hover {
+    border-color: var(--color-border);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transform: translate(-1px, -1px);
+}
+
+.gh-sidebar-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    flex-shrink: 0;
+    border: var(--border-width) solid var(--color-border);
+}
+
+.gh-sidebar-link-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.gh-sidebar-link-intercom {
+    color: #286efa;
+    background: hsla(220, 90%, 56%, 0.08);
+}
+
+.gh-sidebar-link-hubspot {
+    color: #ff7a59;
+    background: hsla(12, 100%, 67%, 0.08);
+}
+
+.gh-sidebar-link-linkedin {
+    color: #0a66c2;
+    background: hsla(210, 87%, 40%, 0.08);
+}
+
+.gh-sidebar-link-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.gh-sidebar-link-text strong {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    color: var(--color-base);
+}
+
+.gh-sidebar-link-text small {
+    font-size: 1.15rem;
+    color: var(--color-muted-fg);
+    line-height: 1.4em;
+}

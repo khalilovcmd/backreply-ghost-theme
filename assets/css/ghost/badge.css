@@ -1,0 +1,33 @@
+/* Powered Badge - Brutalist Style
+/* ---------------------------------------------------------- */
+
+a.gh-powered,
+a.gh-powered:hover {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px 6px 6px;
+    border: var(--border-width) solid var(--color-border);
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.3px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-base);
+    background: var(--color-card);
+    border-radius: 0;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.gh-powered:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+a.gh-powered svg {
+    height: 16px;
+    width: 16px;
+    margin: 0 6px 0 0;
+}

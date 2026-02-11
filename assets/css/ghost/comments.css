@@ -1,0 +1,8 @@
+/* Comments - Brutalist Style
+/* ---------------------------------------------------------- */
+
+.gh-post-comments {
+    margin-block: 8vmin 4vmin;
+    padding: 4vmin 0;
+    border-top: var(--border-width) solid var(--color-border);
+}

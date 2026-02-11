@@ -1,0 +1,79 @@
+/* Buttons - Brutalist Style
+/* ---------------------------------------------------------- */
+
+.gh-button {
+    display: inline-block;
+    min-width: 75px;
+    height: var(--height);
+    padding: 0 2rem;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 1.3rem;
+    font-weight: var(--font-bold);
+    line-height: calc(var(--height) - var(--border-width) * 2);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    appearance: none;
+    background-color: var(--color-card);
+    color: var(--color-base);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.gh-button.gh-button-fit {
+    width: 100%;
+}
+
+.gh-button.gh-button-small {
+    height: calc(var(--height) * 0.9);
+    line-height: calc(var(--height) * 0.9 - var(--border-width) * 2);
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+}
+
+.gh-button.gh-button-large {
+    height: calc(var(--height) * 1.2);
+    line-height: calc(var(--height) * 1.2 - var(--border-width) * 2);
+    padding: 0 2.5rem;
+    font-size: 1.5rem;
+}
+
+.gh-button.gh-button-disabled,
+.gh-button:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.gh-button:hover {
+    text-decoration: none;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gh-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gh-button.gh-button-primary {
+    color: #fff !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gh-button.gh-button-primary:hover {
+    background-color: var(--color-primary);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gh-button.gh-button-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}

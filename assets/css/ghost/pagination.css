@@ -1,0 +1,30 @@
+/* Pagination - Brutalist Style
+/* ---------------------------------------------------------- */
+
+.gh-pagination .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 4vmin;
+}
+
+.gh-pagination .pagination a {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--color-base);
+    background: var(--color-card);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gh-pagination .pagination a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow);
+    color: var(--color-primary);
+}

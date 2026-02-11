@@ -1,0 +1,50 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours - Interhubz brand, ignoring Ghost accent color */
+    --color-primary: hsl(220, 90%, 56%);
+    --color-secondary: hsl(24, 95%, 53%);
+    --color-base: hsl(220, 20%, 10%);
+    --color-border: hsl(220, 20%, 20%);
+    --color-bg: hsl(0, 0%, 98%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-muted: hsl(220, 14%, 96%);
+    --color-muted-fg: hsl(220, 10%, 46%);
+    --color-accent: hsl(217, 91%, 60%);
+    --color-success: #80b912;
+    --color-error: #f05230;
+
+    /* Fonts */
+    --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'IBM Plex Sans Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Space Mono', Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0rem;
+
+    /* Borders */
+    --border-width: 2px;
+    --border-width-thick: 4px;
+
+    /* Shadows - Brutalist hard offset */
+    --shadow: 4px 8px 0px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 6px 12px 0px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 8px 16px 0px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+}
