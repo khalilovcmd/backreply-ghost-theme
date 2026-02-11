@@ -1,26 +1,36 @@
-/* Variables
+/* Variables — BackReply Brand
 /* ---------------------------------------------------------- */
 
 :root {
 
-    /* Colours - Interhubz brand, ignoring Ghost accent color */
-    --color-primary: hsl(220, 90%, 56%);
-    --color-secondary: hsl(24, 95%, 53%);
-    --color-base: hsl(220, 20%, 10%);
-    --color-border: hsl(220, 20%, 20%);
-    --color-bg: hsl(0, 0%, 98%);
-    --color-card: hsl(0, 0%, 100%);
-    --color-muted: hsl(220, 14%, 96%);
-    --color-muted-fg: hsl(220, 10%, 46%);
-    --color-accent: hsl(217, 91%, 60%);
-    --color-success: #80b912;
-    --color-error: #f05230;
+    /* Colours — BackReply playful palette */
+    --color-primary: oklch(0.62 0.12 290);       /* Medium purple */
+    --color-secondary: oklch(0.75 0.15 65);       /* Bright orange */
+    --color-base: oklch(0.2 0.05 280);            /* Deep purple-brown */
+    --color-border: oklch(0.3 0.05 280);          /* Dark border */
+    --color-bg: oklch(0.97 0.05 85);              /* Warm cream/beige */
+    --color-card: oklch(1 0 0);                   /* White */
+    --color-muted: oklch(0.88 0.05 85);           /* Soft warm muted */
+    --color-muted-fg: oklch(0.5 0.05 280);        /* Muted foreground */
+    --color-accent: oklch(0.75 0.15 65);          /* Orange bright */
+    --color-success: #22c55e;
+    --color-error: #ef4444;
+
+    /* Extended palette */
+    --color-purple-main: oklch(0.62 0.12 290);
+    --color-purple-light: oklch(0.75 0.08 295);
+    --color-purple-dark: oklch(0.45 0.15 285);
+    --color-orange-warm: oklch(0.82 0.12 75);
+    --color-yellow-accent: oklch(0.88 0.1 85);
+    --color-mint-card: oklch(0.85 0.08 165);
+    --color-mint-border: oklch(0.68 0.12 170);
+    --color-pink-accent: oklch(0.72 0.18 350);
 
     /* Fonts */
-    --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'IBM Plex Sans Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'Space Mono', Menlo, Courier, monospace;
-    --font-light: 100;
+    --font-sans: 'Fredoka', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Fredoka', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Courier, monospace;
+    --font-light: 300;
     --font-normal: 400;
     --font-bold: 700;
     --font-heavy: 800;
@@ -35,16 +45,20 @@
     /* Sizes */
     --height: 4rem;
     --margin: 2rem;
-    --radius: 0rem;
+    --radius: 1.5rem;
 
     /* Borders */
     --border-width: 2px;
     --border-width-thick: 4px;
 
-    /* Shadows - Brutalist hard offset */
-    --shadow: 4px 8px 0px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 6px 12px 0px rgba(0, 0, 0, 0.2);
-    --shadow-xl: 8px 16px 0px rgba(0, 0, 0, 0.2);
-    --shadow-sm: 2px 4px 0px rgba(0, 0, 0, 0.2);
+    /* Shadows — Soft, modern */
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
 
+    /* Easing curves */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-smooth-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

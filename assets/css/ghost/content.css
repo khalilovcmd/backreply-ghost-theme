@@ -42,7 +42,7 @@
     margin-top: 4vmin;
 }
 
-/* Content headings get primary color accent */
+/* Content headings */
 .gh-content h2,
 .gh-content h3,
 .gh-content h4 {
@@ -57,20 +57,21 @@
     background: var(--color-primary);
     margin-right: 0.4em;
     vertical-align: baseline;
+    border-radius: 2px;
 }
 
-/* Content links use primary with underline */
+/* Content links */
 .gh-content a:not([class]) {
     color: var(--color-primary);
     text-decoration: underline;
-    text-decoration-color: hsla(220, 90%, 56%, 0.3);
+    text-decoration-color: oklch(0.62 0.12 290 / 0.3);
     text-underline-offset: 2px;
-    transition: text-decoration-color 0.15s ease;
+    transition: text-decoration-color 0.2s var(--ease-smooth), color 0.2s var(--ease-smooth);
 }
 
 .gh-content a:not([class]):hover {
     text-decoration-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-purple-dark);
 }
 
 .gh-content [id]:not(:first-child) {
@@ -115,12 +116,9 @@
     position: relative;
     font-style: normal;
     padding: 2rem 2.5rem;
-    background: var(--color-muted);
+    background: oklch(0.75 0.08 295 / 0.1);
     border-left: var(--border-width-thick) solid var(--color-primary);
-    border-top: var(--border-width) solid var(--color-border);
-    border-right: var(--border-width) solid var(--color-border);
-    border-bottom: var(--border-width) solid var(--color-border);
-    box-shadow: var(--shadow-sm);
+    border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .gh-content blockquote::before {
@@ -153,7 +151,7 @@ figcaption {
     padding: 1.5rem 1.5rem 0;
     text-align: center;
     color: var(--color-muted-fg);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.3rem;
     line-height: 1.4em;
 }
@@ -164,26 +162,26 @@ figcaption strong {
 
 .gh-canvas :not(pre) code {
     vertical-align: middle;
-    padding: 0.15em 0.4em 0.15em;
-    border: var(--border-width) solid var(--color-border);
+    padding: 0.15em 0.5em 0.15em;
+    border: 1px solid oklch(0.3 0.05 280 / 0.15);
     font-family: var(--font-mono);
     font-weight: 400 !important;
     font-size: 0.85em;
     line-height: 1em;
     color: var(--color-primary);
-    background: var(--color-muted);
-    border-radius: 0;
+    background: oklch(0.62 0.12 290 / 0.06);
+    border-radius: 0.5rem;
 }
 
 .gh-canvas > pre {
     overflow: scroll;
-    padding: 16px 20px;
+    padding: 20px 24px;
     font-family: var(--font-mono);
     background: var(--color-base);
     color: var(--color-bg);
-    border: var(--border-width) solid var(--color-border);
+    border: 1px solid oklch(0.3 0.05 280 / 0.2);
     box-shadow: var(--shadow);
-    border-radius: 0;
+    border-radius: var(--radius);
 }
 
 .kg-embed-card {
@@ -202,7 +200,7 @@ figcaption strong {
 
 .kg-image-card img {
     margin: auto;
-    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
 
@@ -227,36 +225,38 @@ figcaption strong {
 }
 
 
-/* Tables - Brutalist Style
+/* Tables — BackReply Style
 /* ---------------------------------------------------------- */
 
 .gh-content table {
     border-collapse: collapse;
     width: 100%;
-    border: var(--border-width) solid var(--color-border);
+    border: 1px solid oklch(0.3 0.05 280 / 0.15);
+    border-radius: var(--radius);
+    overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
 
 .gh-content th {
-    padding: 0.6em 0.8em;
+    padding: 0.8em 1em;
     text-align: left;
     font-family: var(--font-heading);
-    font-size: .8em;
+    font-size: .85em;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background: var(--color-base);
-    color: var(--color-bg);
-    border-bottom: var(--border-width) solid var(--color-border);
+    background: var(--color-primary);
+    color: #fff;
+    border-bottom: none;
 }
 
 .gh-content td {
-    padding: 0.5em 0.8em;
-    border-bottom: 1px solid var(--color-border);
+    padding: 0.7em 1em;
+    border-bottom: 1px solid oklch(0.3 0.05 280 / 0.08);
 }
 
 .gh-content tbody tr:nth-child(2n + 1) {
-    background-color: var(--color-muted);
+    background-color: oklch(0.62 0.12 290 / 0.03);
     padding: 1px;
 }
 

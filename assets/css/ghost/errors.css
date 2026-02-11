@@ -1,4 +1,4 @@
-/* Error Templates - Brutalist Style
+/* Error Templates — BackReply Style
 /* ---------------------------------------------------------- */
 
 .gh-error {
@@ -42,20 +42,19 @@
     display: inline-block;
     padding: 0.8rem 2rem;
     font-weight: 700;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 1.4rem;
     text-decoration: none;
     color: #fff;
     background: var(--color-primary);
     border: var(--border-width) solid var(--color-primary);
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px oklch(0.62 0.12 290 / 0.25);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
 }
 
 .gh-error-link a:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px oklch(0.62 0.12 290 / 0.35);
 }
 
 .gh-error-stack {
@@ -73,7 +72,7 @@
 .gh-error-stack-list > li {
     padding: 2rem 0;
     margin: 0;
-    border-top: var(--border-width) solid var(--color-border);
+    border-top: 1px solid oklch(0.3 0.05 280 / 0.1);
 }
 
 .gh-error-stack-function {

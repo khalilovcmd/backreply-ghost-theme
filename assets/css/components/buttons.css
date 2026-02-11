@@ -1,4 +1,4 @@
-/* Buttons - Brutalist Style
+/* Buttons — BackReply Style (Rounded, Playful)
 /* ---------------------------------------------------------- */
 
 .gh-button {
@@ -7,22 +7,20 @@
     height: var(--height);
     padding: 0 2rem;
     border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius);
+    border-radius: 999px;
     cursor: pointer;
     font-family: var(--font-sans);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: var(--font-bold);
     line-height: calc(var(--height) - var(--border-width) * 2);
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     white-space: nowrap;
     appearance: none;
     background-color: var(--color-card);
     color: var(--color-base);
     box-shadow: var(--shadow-sm);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), background-color 0.3s var(--ease-smooth);
 }
 
 .gh-button.gh-button-fit {
@@ -33,7 +31,7 @@
     height: calc(var(--height) * 0.9);
     line-height: calc(var(--height) * 0.9 - var(--border-width) * 2);
     padding: 0 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .gh-button.gh-button-large {
@@ -51,29 +49,30 @@
 
 .gh-button:hover {
     text-decoration: none;
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .gh-button:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
 }
 
 .gh-button.gh-button-primary {
-    color: #fff !important;
-    background-color: var(--color-primary) !important;
-    border-color: var(--color-primary) !important;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    color: var(--color-base) !important;
+    background-color: var(--color-yellow-accent) !important;
+    border-color: var(--color-base) !important;
+    border-width: var(--border-width-thick);
+    box-shadow: 0 4px 16px oklch(0.88 0.1 85 / 0.35);
 }
 
 .gh-button.gh-button-primary:hover {
-    background-color: var(--color-primary);
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-yellow-accent) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px oklch(0.88 0.1 85 / 0.5);
 }
 
 .gh-button.gh-button-primary:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px oklch(0.88 0.1 85 / 0.25);
 }

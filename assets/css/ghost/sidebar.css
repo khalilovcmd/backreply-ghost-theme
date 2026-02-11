@@ -1,4 +1,4 @@
-/* Sidebar - Brutalist Cards
+/* Sidebar — BackReply Style
 /* ---------------------------------------------------------- */
 
 /* Two-column layout */
@@ -57,7 +57,8 @@
 
 .gh-sidebar-card {
     background: var(--color-card);
-    border: var(--border-width) solid var(--color-border);
+    border: var(--border-width) solid oklch(0.3 0.05 280 / 0.12);
+    border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     overflow: visible;
     position: relative;
@@ -75,16 +76,28 @@
     display: inline-block;
     position: relative;
     top: -1.1em;
-    padding: 0.3rem 1.2rem;
+    padding: 0.4rem 1.4rem;
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    color: #fff;
+    background: var(--color-primary);
+    border-radius: 999px;
+}
+
+/* Differentiated badge colors per sidebar section */
+.gh-sidebar-card:nth-child(1) .gh-sidebar-card-title span {
+    background: var(--color-primary);     /* Purple — About Us */
+}
+.gh-sidebar-card:nth-child(2) .gh-sidebar-card-title span {
+    background: var(--color-secondary);   /* Orange — Latest Articles */
     color: var(--color-base);
-    background: var(--color-card);
-    border: var(--border-width) solid var(--color-border);
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.gh-sidebar-card:nth-child(3) .gh-sidebar-card-title span {
+    background: var(--color-mint-border); /* Mint — Find Us */
+    color: var(--color-base);
 }
 
 .gh-sidebar-card-body {
@@ -97,13 +110,13 @@
 /* ---------------------------------------------------------- */
 
 .gh-sidebar-about-logo {
-    max-height: 32px;
+    max-height: 40px;
     margin-bottom: 1.2rem;
 }
 
 .gh-sidebar-about p {
     font-size: 1.35rem;
-    line-height: 1.55em;
+    line-height: 1.6em;
     color: var(--color-muted-fg);
     margin: 0 0 0.8rem;
 }
@@ -113,13 +126,13 @@
     margin-top: 0.5rem;
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 0.2s var(--ease-smooth);
 }
 
 .gh-sidebar-about-link:hover {
-    color: var(--color-secondary);
+    color: oklch(0.65 0.17 60);  /* Deeper orange */
 }
 
 
@@ -137,7 +150,7 @@
     align-items: flex-start;
     gap: 1.2rem;
     padding: 1.2rem 0;
-    border-bottom: 1px solid var(--color-muted);
+    border-bottom: 1px solid oklch(0.3 0.05 280 / 0.08);
 }
 
 .gh-sidebar-article:first-child {
@@ -160,7 +173,7 @@
     font-weight: 700;
     color: #fff;
     background: var(--color-primary);
-    border: var(--border-width) solid var(--color-border);
+    border-radius: 0.8rem;
 }
 
 .gh-sidebar-article:nth-child(2) .gh-sidebar-article-num {
@@ -168,7 +181,7 @@
 }
 
 .gh-sidebar-article:nth-child(3) .gh-sidebar-article-num {
-    background: hsl(142, 76%, 36%);
+    background: var(--color-mint-border);
 }
 
 .gh-sidebar-article-content {
@@ -183,7 +196,7 @@
     line-height: 1.35em;
     color: var(--color-base);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 0.2s var(--ease-smooth);
 }
 
 .gh-sidebar-article-title:hover {
@@ -222,15 +235,17 @@
     padding: 1rem 1.2rem;
     text-decoration: none;
     color: var(--color-base);
-    background: var(--color-muted);
-    border: 1px solid var(--color-muted);
-    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    background: oklch(0.62 0.12 290 / 0.04);
+    border: 1px solid oklch(0.3 0.05 280 / 0.08);
+    border-radius: 1rem;
+    transition: all 0.2s var(--ease-smooth);
 }
 
 .gh-sidebar-link:hover {
-    border-color: var(--color-border);
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-    transform: translate(-1px, -1px);
+    background: oklch(0.62 0.12 290 / 0.08);
+    border-color: oklch(0.62 0.12 290 / 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 .gh-sidebar-link-icon {
@@ -240,7 +255,7 @@
     width: 3.6rem;
     height: 3.6rem;
     flex-shrink: 0;
-    border: var(--border-width) solid var(--color-border);
+    border-radius: 0.8rem;
 }
 
 .gh-sidebar-link-icon img {
@@ -254,9 +269,9 @@
     background: hsla(220, 90%, 56%, 0.08);
 }
 
-.gh-sidebar-link-hubspot {
-    color: #ff7a59;
-    background: hsla(12, 100%, 67%, 0.08);
+.gh-sidebar-link-slack {
+    color: #611f69;
+    background: hsla(294, 55%, 27%, 0.08);
 }
 
 .gh-sidebar-link-linkedin {

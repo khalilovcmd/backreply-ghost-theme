@@ -1,4 +1,4 @@
-/* Pagination - Brutalist Style
+/* Pagination — BackReply Style
 /* ---------------------------------------------------------- */
 
 .gh-pagination .pagination {
@@ -13,18 +13,17 @@
     padding: 0.6rem 1.5rem;
     font-size: 1.3rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     text-decoration: none;
     color: var(--color-base);
     background: var(--color-card);
-    border: var(--border-width) solid var(--color-border);
+    border: var(--border-width) solid oklch(0.3 0.05 280 / 0.12);
+    border-radius: 999px;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), color 0.2s var(--ease-smooth);
 }
 
 .gh-pagination .pagination a:hover {
-    transform: translate(-2px, -2px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow);
     color: var(--color-primary);
 }

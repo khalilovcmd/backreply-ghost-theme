@@ -1,24 +1,24 @@
-/* Forms - Brutalist Style
+/* Forms — BackReply Style (Rounded, Soft)
 /* ---------------------------------------------------------- */
 
 .gh-input,
 .gh-textarea {
     background: var(--color-card);
     border-radius: var(--radius);
-    border: var(--border-width) solid var(--color-border);
+    border: var(--border-width) solid oklch(0.3 0.05 280 / 0.2);
     color: inherit;
     display: block;
     outline: 0;
-    padding: 0 0.6em;
+    padding: 0 1em;
     text-decoration: none;
     width: 100%;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    transition: border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
 }
 
 .gh-input:focus,
 .gh-textarea:focus {
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 0 3px oklch(0.62 0.12 290 / 0.15);
 }
 
 .gh-select {
@@ -46,7 +46,7 @@
 }
 
 .gh-textarea {
-    padding: 0.3em 0.6em;
+    padding: 0.6em 1em;
     resize: vertical;
 }
 
@@ -75,8 +75,8 @@
 .gh-check + label:before,
 .gh-check + label:before {
     background: var(--color-card);
-    border-radius: var(--radius);
-    border: var(--border-width) solid var(--color-border);
+    border-radius: 0.5rem;
+    border: var(--border-width) solid oklch(0.3 0.05 280 / 0.2);
     content: '';
     display: inline-block;
     height: calc(var(--height) * 0.6);
@@ -84,6 +84,7 @@
     text-align: center;
     width: calc(var(--height) * 0.6);
     margin-right: 1rem;
+    transition: all 0.2s var(--ease-smooth);
 }
 
 .gh-check:checked + label:before,
@@ -97,5 +98,5 @@
 .gh-check:focus + label:before,
 .gh-check:focus + label:before {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 3px oklch(0.62 0.12 290 / 0.15);
 }

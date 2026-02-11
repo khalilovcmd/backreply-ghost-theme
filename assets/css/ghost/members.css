@@ -1,4 +1,4 @@
-/* Members Auth Template - Brutalist Style
+/* Members Auth Template — BackReply Style
 /* ---------------------------------------------------------- */
 
 .gh-auth-form {
@@ -12,7 +12,7 @@
     margin: 0 0 0.1em;
     font-family: var(--font-heading);
     font-size: 4.2rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .gh-auth-form p {
@@ -87,26 +87,24 @@ form[data-members-form].error .message-error {
     z-index: 9999;
     max-width: calc(1400px - 8vmin);
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 12px 20px;
     color: #fff;
     font-size: 1.4rem;
     line-height: 1.5em;
     font-weight: 600;
     text-align: center;
     background: var(--color-base);
-    border: var(--border-width) solid var(--color-border);
-    border-radius: 0;
-    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
 }
 form[data-members-form].success .message-success {
     background: var(--color-success);
-    border-color: var(--color-success);
 }
 form[data-members-form].error .message-error {
     color: var(--color-error);
     background: var(--color-card);
-    border-color: var(--color-error);
-    box-shadow: var(--shadow);
+    border: 1px solid oklch(0.3 0.05 280 / 0.1);
+    box-shadow: var(--shadow-lg);
 }
 
 form[data-members-form] .gh-button {
