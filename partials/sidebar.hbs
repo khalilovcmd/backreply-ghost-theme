@@ -9,9 +9,12 @@
                 {{#if @site.logo}}
                     <img class="gh-sidebar-about-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
                 {{/if}}
-                <p>Built by a veteran team that has successfully launched and operated three SaaS products over the last 7 years. We understand support workflows inside and out.</p>
-                <p>BackReply turns Slack threads into a first-class interface for Intercom conversations. Reply in Slack, stay synced in Intercom.</p>
-                <a class="gh-sidebar-about-link" href="https://backreply.com/about" target="_blank" rel="noopener">Our story &rarr;</a>
+                <p>Built by a veteran team that has successfully launched and operated three SaaS products over the last
+                    7 years. We understand support workflows inside and out.</p>
+                <p>BackReply turns Slack threads into a first-class interface for Intercom conversations. Reply in
+                    Slack, stay synced in Intercom.</p>
+                <a class="gh-sidebar-about-link" href="https://backreply.com/about" target="_blank" rel="noopener">Our
+                    story &rarr;</a>
             </div>
         </div>
     </div>
@@ -23,13 +26,14 @@
             <ul class="gh-sidebar-articles">
                 {{#get "posts" limit="3" order="published_at desc"}}
                     {{#foreach posts}}
-                    <li class="gh-sidebar-article">
-                        <span class="gh-sidebar-article-num">{{@number}}</span>
-                        <div class="gh-sidebar-article-content">
-                            <a href="{{url}}" class="gh-sidebar-article-title">{{title}}</a>
-                            <time class="gh-sidebar-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time>
-                        </div>
-                    </li>
+                        <li class="gh-sidebar-article">
+                            <span class="gh-sidebar-article-num">{{@number}}</span>
+                            <div class="gh-sidebar-article-content">
+                                <a href="{{url}}" class="gh-sidebar-article-title">{{title}}</a>
+                                <time class="gh-sidebar-article-date"
+                                    datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time>
+                            </div>
+                        </li>
                     {{/foreach}}
                 {{/get}}
             </ul>
@@ -42,7 +46,8 @@
         <div class="gh-sidebar-card-body">
             <ul class="gh-sidebar-links">
                 <li>
-                    <a href="https://www.intercom.com/app-store/?app_package_code=backreply" target="_blank" rel="noopener" class="gh-sidebar-link">
+                    <a href="https://www.intercom.com/app-store/?app_package_code=backreply" target="_blank"
+                        rel="noopener" class="gh-sidebar-link">
                         <span class="gh-sidebar-link-icon gh-sidebar-link-intercom">
                             <img src="{{asset "images/intercom.png"}}" alt="Intercom" width="20" height="20" />
                         </span>
@@ -55,7 +60,10 @@
                 <li>
                     <a href="https://slack.com/apps" target="_blank" rel="noopener" class="gh-sidebar-link">
                         <span class="gh-sidebar-link-icon gh-sidebar-link-slack">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" />
+                            </svg>
                         </span>
                         <span class="gh-sidebar-link-text">
                             <strong>Slack App Directory</strong>
@@ -64,9 +72,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/company/octopods/" target="_blank" rel="noopener" class="gh-sidebar-link">
+                    <a href="https://www.linkedin.com/company/backreply" target="_blank" rel="noopener"
+                        class="gh-sidebar-link">
                         <span class="gh-sidebar-link-icon gh-sidebar-link-linkedin">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.47 2H3.53A1.45 1.45 0 002 3.37v17.26A1.45 1.45 0 003.53 22h16.94A1.45 1.45 0 0022 20.63V3.37A1.45 1.45 0 0020.47 2zM8.09 18.74h-3v-9h3v9zM6.59 8.48a1.56 1.56 0 110-3.12 1.56 1.56 0 010 3.12zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0012.85 13a2 2 0 00-.1.73v5h-3v-9h3v1.2a3 3 0 012.71-1.5c2 0 3.45 1.29 3.45 4.06v5.25z" fill="currentColor"/></svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.47 2H3.53A1.45 1.45 0 002 3.37v17.26A1.45 1.45 0 003.53 22h16.94A1.45 1.45 0 0022 20.63V3.37A1.45 1.45 0 0020.47 2zM8.09 18.74h-3v-9h3v9zM6.59 8.48a1.56 1.56 0 110-3.12 1.56 1.56 0 010 3.12zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0012.85 13a2 2 0 00-.1.73v5h-3v-9h3v1.2a3 3 0 012.71-1.5c2 0 3.45 1.29 3.45 4.06v5.25z"
+                                    fill="currentColor" />
+                            </svg>
                         </span>
                         <span class="gh-sidebar-link-text">
                             <strong>LinkedIn</strong>
